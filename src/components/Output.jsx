@@ -1,16 +1,12 @@
-import React, {useState} from "react";
-import {connect} from "react-redux"
+import React from "react";
+import { connect } from "react-redux";
 
+function Output(props) {
+  return <div>{props.output}</div>;
+}
 
-function Output (props) {
-    return (
-        <div>
-            {props.output}
-        </div>
-      );}
 const mapStateToProps = (state) => ({
-    output:state.output,
-})
-
+  output: state.output,
+});
 
 export default connect(mapStateToProps)(Output);
