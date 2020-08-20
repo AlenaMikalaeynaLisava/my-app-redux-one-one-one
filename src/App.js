@@ -1,12 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+//import logo from './logo.svg';
+//import { Counter } from './features/counter/Counter';
+import Calculator from './components/Calculator'
+import Output from './components/Output'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Calculator />
+      <Output />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
@@ -50,9 +72,4 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */}
