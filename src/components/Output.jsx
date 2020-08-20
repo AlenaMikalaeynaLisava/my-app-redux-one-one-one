@@ -5,11 +5,11 @@ import {connect} from "react-redux"
 function Output (props) {
     return (
         <div>
-            {props.state}
+            {props.output}
         </div>
       );}
 const mapStateToProps = (state) => ({
-    state
+    output:state.output,
 })
 
 
