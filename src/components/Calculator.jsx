@@ -1,10 +1,11 @@
-import React, {useState} from "react";
-import {connect} from "react-redux"
-import {ADD, MINUS, MULTIPLY, DIVISION} from "../constants/counts"
+import React, { useState } from "react";
+import { connect } from "react-redux";
+//import {ADD, MINUS, MULTIPLY, DIVISION} from "../constants/counts"
 import {addNumber, minusNumber, multiplyNumber, devisionNumber} from "../actions/counts"
 
 function Calculator(props) {
-    const [value, setValue] =useState(0);
+  const [value, setValue] = useState(0);
+
     const handleClickAdd = (e) => {
         props.add(value);
     }
@@ -18,13 +19,14 @@ function Calculator(props) {
         props.devision(value);
     }
     const handleChange = (e) => {
-        setValue (+e.target.value);
-    }
+      setValue(+e.target.value);
+    };
+  
 
   return (
     <div>
         <p>Calculator</p>
-        <input value = {value}onChange = {handleChange} type='number'/>
+        <input value={value} onChange={handleChange} type="number" />
         <button onClick ={handleClickAdd}>Add</button>
         <button onClick ={handleClickMinus}>Minus</button>
         <button onClick ={handleClickMultiply}>Multiply</button>
@@ -33,9 +35,9 @@ function Calculator(props) {
   );
 }
 
-const mapStateToProps = (state) => ({
-    state
-  });
+// const mapStateToProps = (state) => ({
+//     state
+//   });
   const mapDispatchToProps = (dispatch) => {
     return {
         add: (number) => dispatch(addNumber(number)),
@@ -44,4 +46,4 @@ const mapStateToProps = (state) => ({
         devision: (number) => dispatch(devisionNumber(number)),
     };
   };
-export default connect(mapStateToProps, mapDispatchToProps)(Calculator);
+export default connect(null, mapDispatchToProps)(Calculator);

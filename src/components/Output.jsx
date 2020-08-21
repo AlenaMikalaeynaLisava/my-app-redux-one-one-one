@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 function Output(props) {
+  //console.log(props.output);
   return <div>{props.output}</div>;
 }
 

@@ -1,7 +1,7 @@
 import {ADD, MINUS, MULTIPLY, DIVISION} from "../constants/counts"
 
-const initialSte = 0;
-const reducer = (state = initialSte, action)=>{ 
+const initialState = 0;
+const reducer = (state = initialState, action)=>{ 
     switch(action.type){
         case ADD:
             return state + action.payload;
