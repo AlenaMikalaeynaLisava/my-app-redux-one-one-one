@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
-import reducerFirst from './reducerFirst';
+import {combineReducers} from "redux";
+import math from './math';
 
 const rootReducer = combineReducers({
-    output: reducerFirst,
+    output: math,
 })
 export default rootReducer;
